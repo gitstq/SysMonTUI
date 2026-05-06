@@ -1,0 +1,3 @@
+[console_scripts]
+smt = sysmontui.__main__:main
+sysmontui = sysmontui.__main__:main
