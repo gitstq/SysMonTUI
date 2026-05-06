@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmontui"
+version = "1.0.0"
+description = "🖥️ Lightweight Cross-Platform System Monitor TUI - Real-time CPU, Memory, Disk, Network monitoring with beautiful terminal UI"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "gitstq", email = "gitstq@example.com"}
+]
+keywords = ["system-monitor", "tui", "terminal", "cpu", "memory", "disk", "network", "monitoring", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Monitoring",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "psutil>=5.9.0",
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/gitstq/SysMonTUI"
+Repository = "https://github.com/gitstq/SysMonTUI"
+Documentation = "https://github.com/gitstq/SysMonTUI#readme"
+"Bug Reports" = "https://github.com/gitstq/SysMonTUI/issues"
+
+[project.scripts]
+sysmontui = "sysmontui.__main__:main"
+smt = "sysmontui.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sysmontui*"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
