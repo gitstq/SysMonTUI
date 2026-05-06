@@ -1,0 +1,37 @@
+Metadata-Version: 2.4
+Name: sysmontui
+Version: 1.0.0
+Summary: 🖥️ Lightweight Cross-Platform System Monitor TUI - Real-time CPU, Memory, Disk, Network monitoring with beautiful terminal UI
+Author-email: gitstq <gitstq@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/gitstq/SysMonTUI
+Project-URL: Repository, https://github.com/gitstq/SysMonTUI
+Project-URL: Documentation, https://github.com/gitstq/SysMonTUI#readme
+Project-URL: Bug Reports, https://github.com/gitstq/SysMonTUI/issues
+Keywords: system-monitor,tui,terminal,cpu,memory,disk,network,monitoring,cli
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: psutil>=5.9.0
+Requires-Dist: rich>=13.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Dynamic: license-file
